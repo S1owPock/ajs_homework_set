@@ -2,7 +2,7 @@ export default class Team {
   constructor() {
     this.members = new Set();
   }
-  
+
   add(name) {
     this.members.forEach((item) => {
       if (item === name) {
@@ -11,13 +11,13 @@ export default class Team {
     });
     this.members.add(name);
   }
-  
+
   addAll(...names) {
     names.forEach((item) => {
       this.members.add(item);
     });
   }
-  
+
   toArray() {
     return Array.from(this.members);
   }
